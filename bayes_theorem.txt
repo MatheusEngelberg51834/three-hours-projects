@@ -4,7 +4,7 @@ There's a description of a person, it sais the person is really introvert and li
 Well, seeing the video and the way I explained, I am very inclined to say that you tought the person is a librarian.
 
 The Bayes Theorem will be used to calculate the certainty you have, or the probability that you are right; as this is the use of the theorem, it gives you the probalility of a theory (the person
-is a librarian) to be right, given some evidence. What is the evidence? The number of librarians and no librarians that fix in the description.
+is a librarian) to be right, given some evidence. What is the evidence? The number of librarians and no librarians that fit in the description.
 
 Let's assume that for every 21 people in our sample, 20 are farmers and 1 is a librarian (what gives you a propotion of 20:1). Using a items aproach to complete the formula:
 
@@ -18,12 +18,12 @@ P(H) is the probability of, from our sample, you randomly choose librarian. Seei
 
 II - getting P(H|E):
 
-P(H|E) is the probability that, from our P(H), you will randomly choose a librarian that fix in the description given. Let's say it is 4 / 10 (four for every ten)
+P(H|E) is the probability that, from our P(H), you will randomly choose a librarian that fit in the description given. Let's say it is 4 / 10 (four for every ten)
 
 III - getting P(H)P(E|H):
 
 This will be the simple multiplication of P(H) and P(H|E). 1 / 21 . 4 / 10 = 4 / 210. This means that for every 210 people in our sample of farmers and librarians, 4 are librarians
-that fix with the description, in other words, it's the probabiliy of the hipotesys to be true, given the evidence. This is not the certainty you can have.
+that fit with the description, in other words, it's the probabiliy of the hipotesys to be true, given the evidence. This is not the certainty you can have.
 
 IV - getting P(-H):
 
@@ -32,7 +32,7 @@ in our case, a farmer. As 1 every 21 people is a librarian, 20 of every 21 peopl
 
 V - getting P(E|-H):
 
-This is the probability of a farmer to fix in the description. Let's say it is 1 / 10 (one for every ten). We will get P(-H).P(E|-H) in the next step.
+This is the probability of a farmer to fit in the description. Let's say it is 1 / 10 (one for every ten). We will get P(-H).P(E|-H) in the next step.
 
 VI - doing some calculation:
 
