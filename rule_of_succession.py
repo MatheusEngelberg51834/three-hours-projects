@@ -1,3 +1,3 @@
-def rule_of_succession(prob):
-    return ((prob * 100) + 10) / (100 + 20)
+def rule_of_succession(prob, amostral_space):
+    return ((prob * a_s) + 1) / (a_s + 2)
 
