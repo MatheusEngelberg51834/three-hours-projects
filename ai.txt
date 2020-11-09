@@ -1,0 +1,53 @@
+I - Linear Regression:
+
+Training Set --> Learning Algorithm --> Hypothesis [H] --> Estimate Value
+                   
+                                                                               n
+Hypothesis ----> h(x) = TETA(0) + TETA(1) . X(1) + ... + TETA(n) . X(n) ----> SUM TETA(j) . X(j), where X(0) = 1
+                                                                             j = 0
+
+TETA = [TETA(0),    X = [X(0),
+	TETA(1),         X(1),
+	  .               .
+	  .               .
+	  .               .
+        TETA(n)]         X(n)]
+
+
+TETA = parameters
+M = number of rows
+X = features
+Y = target variable
+(X, Y) = training example
+(X(i), Y(i)) = Ith training example
+N = # of features
+
+How to choose parameters (TETA) such that h(x) == y for the training examples?
+
+hTETA(x) = h(x)
+
+
+                    1    m
+minimize TETA -->  ---  SUM  (h(x(i)) - y) ^ 2  --> COST FUNCTION ( J(TETA) )
+                    2  i = 1
+
+
+--- Batch Gradient Descent:
+
+(Not good with big data sets, every step requires a sum of the dataset)
+
+start with some TETA (say TETA n-dimensional vector(0))
+
+keep changing THETA tp reduce J(THETA)
+
+each step is:
+	
+        REPEAT UNTIL CONVERGENCE:
+                              
+	THETA(j) assign as  THETA(j) - ALPHA . partial derivative of cost function in respect to the parameter THETA(j) [((h(x) - y) . xj]
+------> THETA(j) - ALPHA (learning rate) . ((h(x) - y) . xj ---> THETA(j) - ALPHA . SUM (i = 1 -> m) of the partial derivative 
+
+
+--- Stochastic Gradient Descent:
+
+loops from i = 1 to m the gradient descent (without sum), the derivative is only in respect to one example
