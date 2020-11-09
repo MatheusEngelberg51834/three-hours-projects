@@ -66,3 +66,35 @@ def parse_search_query():
 
     search_query = list(map(str, input().split()))
     return ngram(tokenize(search_query), (len(min(search_query, key=len)) + 1), len(max(search_query, key=len)))
+
+def extract():
+    for path in os.listdir(folder):
+        collection = defaultdict(int)
+        book = read_file(folder + '/' + path)
+        total_de_paginas = 0
+        try:
+            for key in book:
+                total_de_paginas += 1
+                similarity = 0
+                tokens = nlp(book[key])
+                for token1 in tokens:
+                    for token2 in tokens:
+                        print(token1.similarity(token2))
+                        similarity += token1.similarity(token2)
+                collection[str(key)] += similarity / book[key]
+        except:
+            pass
+
+    soma = 0
+    x = []
+    y = []
+    for page in collection:
+        soma +=  collection[page]
+        total_de_paginas += 1
+        x.append(page)
+        y.append(collection[page])
+
+    plt.bar(x, y)
+    plt.xlabel('numero da pagina')
+    plt.ylabel('similaridade')
+    plt.show()
