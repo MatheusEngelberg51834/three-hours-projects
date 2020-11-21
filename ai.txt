@@ -51,3 +51,44 @@ each step is:
 --- Stochastic Gradient Descent:
 
 loops from i = 1 to m the gradient descent (without sum), the derivative is only in respect to one example
+
+II - Decision Trees:
+
+Greedy, Top-Down, Recursive Partitioning --->
+
+Region Rp, looking for split Sp,
+Sp(j,t) = ({X|Xj < t, XERp}, {X|Xj >= t, XERp})
+
+How to choose splits?
+
+Define L(R), loss on R
+Given C classes, define ^Pc to be the proportion of examples in R that are of class c --->
+
+Lc = 1 - max ^Pc
+	  c
+	  
+max L(Rp) - (L(R1) + L(R2))
+     parent   children loss
+     loss
+      
+Misclassification Loss has issues, instead, define cross-entropy loss
+
+  L     =  - SUM Pc LOG Pc
+ cross        c        2
+
+Gini Loss --->
+
+SUM Pc(1 - Pc)
+ c
+ 
+Regression Trees --->
+
+  Rm
+Predict ^Ym = SUM   (Yi - ^Ym)^2 = Lsquared
+	      iERm  ------------
+	      		|Rm|
+
+Categorical Vars --->
+
+
+
